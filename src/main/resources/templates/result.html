@@ -8,17 +8,11 @@
 
 </head>
 <body>
-	<form id="formId" action="/upload" method="POST"
-		enctype="multipart/form-data">
-		<input type="file" name="file" /> <input type="button" value="提交"
-			onclick="upload()">
-	</form>
+${status}
+${contentType}
+${name}
+${originalFilename}
+${size}
 
-	<script type="text/javascript">
-		function upload() {
-			$("#formId").submit();
-		}
-	</script>
-w
 </body>
 </html>
