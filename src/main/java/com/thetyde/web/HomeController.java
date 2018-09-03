@@ -1,5 +1,6 @@
 package com.thetyde.web;
 
+import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,7 +31,9 @@ public class HomeController {
 		model.addAttribute("size", file.getSize());
 		String path = request.getSession().getServletContext().getRealPath("upload/");
 		FileUtil.uploadFile(file.getBytes(), path, file.getOriginalFilename());
-
+		System.out.println("upload path : " + path);
+		File file1 = new File(".");
+		System.out.println("实际地址 : " + file1.getAbsolutePath());
 		model.addAttribute("status", "success");
 		return "result";
 	}
